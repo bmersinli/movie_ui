@@ -1,3 +1,4 @@
+![Simulator Screen Shot - iPhone 11 Pro - 2022-02-05 at 19 29 04](https://user-images.githubusercontent.com/96727094/152650257-a74c22b3-8a2f-4528-9542-7300dccb3915.png)
 # movie_ui
 
 A new flutter module project.
