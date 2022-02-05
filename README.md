@@ -1,4 +1,5 @@
-![Simulator Screen Shot - iPhone 11 Pro - 2022-02-05 at 19 29 04](https://user-images.githubusercontent.com/96727094/152650257-a74c22b3-8a2f-4528-9542-7300dccb3915.png)
+<img width="315" alt="Ekran Resmi 2022-02-05 19 39 19" src="https://user-images.githubusercontent.com/96727094/152650312-ffe13c0b-35f1-416b-93d6-e96418f1d513.png">
+
 # movie_ui
 
 A new flutter module project.
