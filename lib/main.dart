@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'login.dart';
+import 'explore.dart';
 
 void main() {
   runApp(MyApp());
@@ -8,10 +9,11 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Movie Library",
-      debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
-    );
+    return MaterialApp(initialRoute: "/", routes: {
+      "/": (context) => LoginScreen(),
+      "/ExplorePageRoute": (context) => ExplorePage(),
+    });
   }
 }
+
+

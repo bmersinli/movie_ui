@@ -1,14 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:movie_ui/main.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
-
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  TextEditingController t1 = TextEditingController();
+  TextEditingController t2 = TextEditingController();
+  logIn() {
+    if (t1.text == "Beyza" && t2.text == "1234") {
+      Navigator.pushNamed(
+        context,
+        "/ExplorePageRoute",
+        arguments: DataModel(username: t1.text, password: t2.text),
+      );
+    }
+  }
+
   bool isRememberMe = false;
 
   Widget buildEmail() {
@@ -36,6 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           height: 60,
           child: TextField(
+            controller: t1,
             keyboardType: TextInputType.emailAddress,
             style: TextStyle(
               color: Colors.black87,
@@ -83,6 +95,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           height: 60,
           child: TextField(
+            controller: t2,
             obscureText: true,
             style: TextStyle(
               color: Colors.black87,
@@ -185,7 +198,7 @@ class _LoginScreenState extends State<LoginScreen> {
       width: double.infinity,
       child: RaisedButton(
         elevation: 5,
-        onPressed: () => print("Login Pressed"),
+        onPressed: logIn,
         padding: EdgeInsets.all(15),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
@@ -255,4 +268,9 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
+}
+
+class DataModel {
+  String username, password;
+  DataModel({required this.username, required this.password});
 }
