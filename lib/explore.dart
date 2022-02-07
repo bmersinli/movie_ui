@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:movie_ui/main.dart';
 
@@ -56,9 +58,21 @@ class _ExplorePageState extends State<ExplorePage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "MovieBeer",
-                    style: TextStyle(color: Colors.black, fontSize: 40),
+                  RichText(
+                    text: TextSpan(
+                      style: TextStyle(color: Colors.black),
+                      children: [
+                        TextSpan(
+                          text: "Movie",
+                          style: TextStyle(
+                              fontSize: 40, fontWeight: FontWeight.bold),
+                        ),
+                        TextSpan(
+                          text: "Beer",
+                          style: TextStyle(fontSize: 40),
+                        ),
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: 5,
