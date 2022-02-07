@@ -32,7 +32,7 @@ class _ExplorePageState extends State<ExplorePage> {
     return Scaffold(
       backgroundColor: Color.fromRGBO(244, 243, 243, 1),
       appBar: AppBar(
-        backgroundColor: Colors.black45,
+        backgroundColor: Colors.white,
         brightness: Brightness.light,
         elevation: 0,
         leading: IconButton(
@@ -54,17 +54,18 @@ class _ExplorePageState extends State<ExplorePage> {
               ),
               padding: EdgeInsets.all(20.0),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Browse",
-                    style: TextStyle(color: Colors.black87, fontSize: 25),
+                    "MovieBeer",
+                    style: TextStyle(color: Colors.black, fontSize: 40),
                   ),
                   SizedBox(
-                    height: 3,
+                    height: 5,
                   ),
                   Text(
-                    "Best Movies",
-                    style: TextStyle(color: Colors.black, fontSize: 40),
+                    "Pick a movie, grab a beer & enjoy",
+                    style: TextStyle(color: Colors.pink[300], fontSize: 20),
                   ),
                   SizedBox(
                     height: 20,
@@ -100,7 +101,10 @@ class _ExplorePageState extends State<ExplorePage> {
                 children: [
                   Text(
                     "Are you there, cinéphilie?",
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        color: Colors.pink,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: 15,
@@ -108,10 +112,60 @@ class _ExplorePageState extends State<ExplorePage> {
                   Container(
                     height: 200,
                     child: ListView(
-                      scrollDirection: Axis.vertical,
+                      scrollDirection: Axis.horizontal,
                       children: [
-                        movieCard(""),
+                        movieCard("assets/images/two.jpeg"),
+                        movieCard("assets/images/blade.jpeg"),
+                        movieCard("assets/images/taxi.jpg"),
+                        movieCard("assets/images/alien.jpg"),
+                        movieCard("assets/images/haine.jpeg"),
+                        movieCard("assets/images/inception.jpg"),
+                        movieCard("assets/images/me.jpeg"),
+                        movieCard("assets/images/nbk.jpg"),
+                        movieCard("assets/images/nwh.jpeg"),
+                        movieCard("assets/images/pulp.jpeg"),
+                        movieCard("assets/images/shutter.jpg"),
+                        movieCard("assets/images/beauty.jpg"),
+                        movieCard("assets/images/milk.jpg"),
+                        movieCard("assets/images/boy.jpeg"),
+                        movieCard("assets/images/hp1.jpg"),
                       ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    height: 150,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage("assets/images/bottom.jpg"),
+                      ),
+                    ),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        gradient: LinearGradient(
+                          begin: Alignment.bottomRight,
+                          stops: [0.4, 0.9],
+                          colors: [
+                            Colors.black.withOpacity(.9),
+                            Colors.black.withOpacity(.5),
+                          ],
+                        ),
+                      ),
+                      child: Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Padding(
+                          padding: EdgeInsets.all(15.0),
+                          child: Text(
+                            "Your Library",
+                            style: TextStyle(color: Colors.white, fontSize: 20),
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -125,13 +179,14 @@ class _ExplorePageState extends State<ExplorePage> {
 
   Widget movieCard(image) {
     return AspectRatio(
-      aspectRatio: 2 / 3,
+      aspectRatio: 2.10 / 3,
       child: Container(
+        margin: EdgeInsets.only(right: 15.0),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           image: DecorationImage(
             fit: BoxFit.cover,
-            image: AssetImage("assets/images/two.jpeg"),
+            image: AssetImage(image),
           ),
         ),
         child: Container(
@@ -141,7 +196,7 @@ class _ExplorePageState extends State<ExplorePage> {
               begin: Alignment.bottomRight,
               stops: [0.1, 0.9],
               colors: [
-                Colors.black.withOpacity(.8),
+                Colors.black.withOpacity(.7),
                 Colors.black.withOpacity(.1),
               ],
             ),

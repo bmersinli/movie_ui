@@ -47,6 +47,21 @@ flutter:
   assets:
   - assets/images/one.jpg
   - assets/images/two.jpeg
+  - assets/images/blade.jpeg
+  - assets/images/alien.jpg
+  - assets/images/haine.jpeg
+  - assets/images/inception.jpg
+  - assets/images/me.jpeg
+  - assets/images/nbk.jpg
+  - assets/images/nwh.jpeg
+  - assets/images/pulp.jpeg
+  - assets/images/shutter.jpg
+  - assets/images/taxi.jpg
+  - assets/images/bottom.jpg
+  - assets/images/beauty.jpg
+  - assets/images/boy.jpeg
+  - assets/images/milk.jpg
+  - assets/images/hp1.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
